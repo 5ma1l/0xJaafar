@@ -1,0 +1,74 @@
+body {
+    background-color: #27374D;
+    font-family: "Lucida Console";
+}
+
+.header {
+    font-size: 20px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0 1rem;
+    padding: 0;
+    overflow: hidden;
+}
+
+.navbar-item {
+    float: left;
+    padding: 14px 16px;
+}
+
+a {
+    display: block;
+    color:#DDE6ED;
+    text-decoration: none;
+    padding: 20px 0;
+}
+
+.link {
+    text-align: center;
+}
+
+.title {
+    color:#4682A9;
+}
+
+a:hover {
+    color: #9DB2BF;
+  }
+
+hr {
+    border: 1px solid #526D82;
+    margin: 0;
+}
+.name-font {
+    font-weight: bold;
+    color: #DDE6ED;
+}
+
+.container {
+    margin: 2% 10%;
+}
+
+.col {
+    margin: 2%;
+}
+.contact-lg {
+    color:#9DB2BF;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
+
+.inl:hover {
+    text-decoration:underline;
+}
+
+.posts {
+    background-color: #F6F4EB;
+    border-radius: 5px;
+}

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block posts %}
+<div class="content_post"> 
+    <slot>
+    </slot>
+</div>
+<script>
+    const contentDiv = document.querySelector('.content_post');
+    const shadowRoot = contentDiv.attachShadow({ mode: 'open' });
+
+    // Create a shadow DOM subtree
+    const shadowContent = document.createElement('div');
+    shadowContent.innerHTML = `{% include content_url+name+".html" %}`;
+
+    // Update the image src attributes with Flask's url_for
+    const images = shadowContent.querySelectorAll('img');
+    images.forEach(img => {
+        const currentSrc = img.getAttribute('src');
+        const newSrc = '{{ url_for("static", filename="") }}' + currentSrc;
+        img.src = newSrc;
+    });
+
+    // Append the shadow DOM subtree to the shadow root
+    shadowRoot.appendChild(shadowContent);
+</script>
+{% endblock %}

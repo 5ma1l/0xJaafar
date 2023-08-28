@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block posts %}
+<div>
+    <h3 style="color: #4682A9;">Recent Posts</h3>
+    <hr>
+    {% for post in posts %}
+    <a href="{{ url_for('post_route',name=post.name) }}" class="title">
+        <h2 style="color:#27374D" class="inl">{{post.title}}</h2>
+        <span><i class="fa-regular fa-clock"></i></span>
+        <span >{{post.date_joined}}</span>
+        <br>
+        <p>{{post.description}}...</p>
+        <hr>
+    </a>
+
+    {% endfor %}
+
+</div>
+
+{% endblock %}
